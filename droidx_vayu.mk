@@ -11,18 +11,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit common Blaze configurations
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit common DroidX configurations
+$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
+
 TARGET_BOOT_ANIMATION_RES := 1080
+
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-BLAZE_BUILD_TYPE := OFFICIAL
-BLAZE_MAINTAINER := GXC2356
-TARGET_GAPPS_ARCH := arm64
-WITH_GAPPS := true
+
+# Droidx Settings
+DROIDX_BUILD_TYPE := UNOFFICIAL
+DROIDX_GAPPS := true
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2400
